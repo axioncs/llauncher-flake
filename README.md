@@ -19,7 +19,7 @@ This flake exists for NixOS/Nix users where that isn't an option.
 ```
 
 ```nix
-home.packages = [ inputs.llauncher.packages.${system}.default ];
+inputs.llauncher.packages.${pkgs.stdenv.hostPlatform.system}.default
 ```
 
 Or run directly without installing:
