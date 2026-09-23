@@ -14,7 +14,10 @@ This flake exists for NixOS/Nix users where that isn't an option.
 
 ```nix
 {
-  inputs.llauncher.url = "github:axioncs/llauncher-flake";
+  inputs.llauncher = {
+    url = "github:axioncs/llauncher-flake";
+    inputs.nixpkgs.follows = "nixpkgs";
+  };
 }
 ```
 
